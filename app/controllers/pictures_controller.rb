@@ -9,7 +9,17 @@ class PicturesController < ApplicationController
   end
 
   def new
-    @picture = Picture.new
+    if params[:back]
+      @picture = Picture.new(picture_params)
+    else
+      @picture = Picture.new
+    end
+  end
+
+  def confirm
+    @picture = Picture.new(picture_params)
+    @picture.user_id = current_user.id
+    render :new if @picture.invalid?
   end
 
   def edit
@@ -17,7 +27,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new(picture_params)
-
+    @picture.user_id = current_user.id
     respond_to do |format|
       if @picture.save
         format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
