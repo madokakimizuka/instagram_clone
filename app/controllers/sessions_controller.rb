@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  # ApplicationControllerに記述されたアクションをskip
+  # skip_before_action :user_logged_in?
+
   def new
   end
 
