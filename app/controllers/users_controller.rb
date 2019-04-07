@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      # ログイン状態にするために必要
       session[:user_id] = @user.id
       redirect_to user_path(@user.id)
     else

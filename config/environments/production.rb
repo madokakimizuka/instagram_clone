@@ -89,6 +89,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # メール送信ホストの情報の記載
   config.action_mailer.default_url_options = { host: 'rocky-retreat-34035.herokuap.com'}
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
