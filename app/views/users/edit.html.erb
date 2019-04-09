@@ -12,23 +12,30 @@
     </div>
   <% end %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
 
-  <%= f.label :self_portrait %>
-  <%= self_portrait_tag(@user.self_portrait.url) if @user.self_portrait && @user.self_portrait.url %>
-  <%= f.file_field :self_portrait, id: :user_self_portrait %>
-  <%= f.hidden_field :self_portrait_cache %>
+  <div class="field">
+    <%= f.label :self_portrait %>
+    <%= f.file_field :self_portrait %>
+  </div>
 
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
 
   <%= f.submit "Edit my profile" %>
 <% end %>

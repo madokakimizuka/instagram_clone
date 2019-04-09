@@ -7,5 +7,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  mount_uploader :self_portrait, ImageUploader
+
   has_many :pictures
 end

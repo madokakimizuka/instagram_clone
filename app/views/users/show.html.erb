@@ -1,6 +1,6 @@
 <h1><%= @user.name %>のページ</h1>
 
-# プロフィール画像を表示する
+<%= image_tag @user.self_portrait.url %>
 
 <%= link_to "プロフィールを編集する", edit_user_path(@user.id) %>
 
