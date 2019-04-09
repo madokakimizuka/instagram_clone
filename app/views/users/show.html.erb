@@ -1,10 +1,9 @@
 <h1><%= @user.name %>のページ</h1>
 
 <%= image_tag @user.self_portrait.url %>
-
-<%= link_to "プロフィールを編集する", edit_user_path(@user.id) %>
-
 <p>メールアドレス: <%= @user.email %></p>
+
+<p><%= link_to "プロフィールを編集する", edit_user_path(@user.id) %></p>
 
 <table>
   <thead>
