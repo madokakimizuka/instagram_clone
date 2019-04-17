@@ -7,7 +7,7 @@ class FavoritesController < ApplicationController
 
   def index
     @user = current_user
-    @pictures = @user.favorites.pictures
+    @favorites = @user.favorites
   end
 
   def destroy

@@ -13,14 +13,14 @@
   </thead>
 
   <tbody>
-    <% @pictures.each do |picture| %>
+    <% @favorites.each do |favorite| %>
       <tr>
-        <td><%= picture.title %></td>
-        <td><%= image_tag picture.image.url %></td>
-        <td><%= picture.content %></td>
-        <td><%= picture.user.name %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <% if current_user.id == picture.user.id %>
+        <td><%= favorite.picture.title %></td>
+        <td><%= image_tag favorite.picture.image.url %></td>
+        <td><%= favorite.picture.content %></td
+        <td><%= favorite.picture.user.name %></td>
+        <td><%= link_to 'Show', favorite.picture %></td>
+        <% if current_user.id == favorite.picture.user.id %>
           <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
           <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
