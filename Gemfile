@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bcrypt', '3.1.11'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'faker'
 
 
 gem 'coffee-rails', '~> 4.2'
