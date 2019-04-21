@@ -1,17 +1,27 @@
 body {
   font-size: 18px;
+  background-color: #fff9f4;
+  font-family: arial unicode ms;
 }
 
 a {
   color: #111;
 }
 
+h1 {
+  font-family: arial black;
+}
 .header {
   margin: 10px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./p6969.jpg");
 }
 .header a {
-  font-size: 20px;
-  color: #111;
-  margin: 4px 6px;
+  font-size: 25px;
+  color: #ff0066;
+  margin-top: 200px;
+  margin-right:  10px;
   float: right;
 }
